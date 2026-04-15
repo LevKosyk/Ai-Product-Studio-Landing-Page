@@ -12,17 +12,15 @@ type SectionRevealProps = {
 const revealVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 44,
-    filter: "blur(7px)",
+    y: 14,
   },
   visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: {
-      duration: 0.8,
+      duration: 0.45,
       delay,
-      ease: [0.21, 1, 0.31, 1],
+      ease: [0.22, 1, 0.36, 1],
     },
   }),
 };
@@ -41,7 +39,7 @@ export function SectionReveal({
       initial="hidden"
       whileInView="visible"
       custom={delay}
-      viewport={{ once: true, amount: 0.22 }}
+      viewport={{ once: true, amount: 0.25 }}
     >
       {children}
     </motion.section>

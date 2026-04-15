@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
-  <defs>
-    <linearGradient id="edge" x1="36" y1="40" x2="220" y2="216" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#53E1FF" />
-      <stop offset="1" stop-color="#5F91FF" />
-    </linearGradient>
-    <radialGradient id="aura" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(128 126) rotate(90) scale(94)">
-      <stop stop-color="#5FD8FF" />
-      <stop offset="1" stop-color="#0A1630" />
-    </radialGradient>
-  </defs>
-  <rect width="256" height="256" rx="56" fill="#030813" />
-  <rect x="8" y="8" width="240" height="240" rx="48" stroke="#6FA2FF" stroke-opacity="0.32" stroke-width="2" />
-  <circle cx="128" cy="128" r="86" fill="url(#aura)" fill-opacity="0.34" />
-  <circle cx="128" cy="128" r="74" stroke="url(#edge)" stroke-width="10" />
-  <path d="M106 86V96M128 86V96M150 86V96M106 160V170M128 160V170M150 160V170M86 106H96M86 128H96M86 150H96M160 106H170M160 128H170M160 150H170" stroke="#6EE7FF" stroke-width="6" stroke-linecap="round" />
-  <rect x="96" y="96" width="64" height="64" rx="14" fill="#08152C" stroke="#79EAFF" stroke-width="6" />
-  <rect x="114" y="114" width="28" height="28" rx="6" fill="#AAF3FF" />
-  <path d="M114 114L100 100M142 114L156 100M114 142L100 156M142 142L156 156" stroke="#4BDFFF" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round" />
+  <rect width="256" height="256" rx="56" fill="#0B1220" />
+  <rect x="14" y="14" width="228" height="228" rx="42" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="2" />
+
+  <path
+    d="M86 168L118 88H138L170 168"
+    stroke="#FFFFFF"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M98 138H158"
+    stroke="#FFFFFF"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+
+  <rect x="72" y="182" width="112" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.82" />
 </svg>

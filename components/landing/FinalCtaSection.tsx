@@ -1,38 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { MagneticButton } from "./MagneticButton";
+import { ArrowRight } from "./icons";
 import { SectionReveal } from "./SectionReveal";
 
 export function FinalCtaSection() {
   return (
-    <SectionReveal className="px-6 pt-6 pb-24 sm:px-10 lg:px-14" delay={0.1}>
-      <div className="mx-auto w-full max-w-7xl">
-        <motion.div
-          whileHover={{ y: -3 }}
-          className="glass-panel-strong rounded-4xl px-6 py-12 text-center sm:px-10"
+    <SectionReveal className="px-6 pt-16 pb-32 sm:px-10" delay={0.04}>
+      <div className="mx-auto w-full max-w-5xl text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.38 }}
+          className="font-display text-4xl tracking-tight text-slate-900 sm:text-6xl"
         >
-          <p className="mb-4 text-xs tracking-[0.26em] text-cyan-100/70 uppercase">
-            Final Call
-          </p>
-          <h2 className="font-display text-3xl text-white sm:text-5xl">
-            Start Building With AI Today
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
-            Join ambitious teams shipping category-leading SaaS products with a
-            studio designed for speed, intelligence, and visual excellence.
-          </p>
+          Start building in minutes
+        </motion.h2>
 
-          <div className="mt-10 flex justify-center">
-            <MagneticButton className="group glow-ring rounded-xl bg-linear-to-r from-cyan-300 to-sky-300 px-8 py-3 text-sm font-semibold text-slate-950 shadow-[0_0_35px_rgba(72,221,255,0.42)] hover:shadow-[0_0_48px_rgba(72,221,255,0.58)]">
-              <span className="flex items-center gap-2">
-                Launch AI Studio
-                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-              </span>
-            </MagneticButton>
-          </div>
-        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.38, delay: 0.06 }}
+          className="mx-auto mt-6 max-w-2xl text-lg text-slate-600"
+        >
+          Create your next SaaS concept with a workflow built for speed, clarity, and execution.
+        </motion.p>
+
+        <motion.a
+          href="#demo"
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.3, delay: 0.12 }}
+          whileHover={{ scale: 1.02 }}
+          className="mt-10 inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-base font-medium text-white transition hover:opacity-90"
+        >
+          Get Started
+          <ArrowRight className="h-4 w-4" />
+        </motion.a>
       </div>
     </SectionReveal>
   );

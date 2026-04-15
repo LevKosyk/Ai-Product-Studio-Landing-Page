@@ -1,79 +1,97 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
-import { AnimatedBackground } from "./AnimatedBackground";
-import { CustomCursor } from "./CustomCursor";
-import { DashboardPreviewSection } from "./DashboardPreviewSection";
+import Image from "next/image";
+import { ComparisonSection } from "./ComparisonSection";
 import { FeaturesSection } from "./FeaturesSection";
 import { FinalCtaSection } from "./FinalCtaSection";
+import { FooterSection } from "./FooterSection";
+import { FaqSection } from "./FaqSection";
 import { HeroSection } from "./HeroSection";
+import { HowItWorksSection } from "./HowItWorksSection";
 import { InteractiveDemoSection } from "./InteractiveDemoSection";
-import { PricingSection } from "./PricingSection";
+import { MetricsSection } from "./MetricsSection";
+import { ParallaxBackdrop } from "./ParallaxBackdrop";
+import { TestimonialsSection } from "./TestimonialsSection";
+import { UseCasesSection } from "./UseCasesSection";
+import { useScroll, useTransform } from "framer-motion";
 
 const navItems = [
   { href: "#features", label: "Features" },
+  { href: "#how", label: "How It Works" },
   { href: "#demo", label: "Demo" },
-  { href: "#pricing", label: "Pricing" },
+  { href: "#metrics", label: "Metrics" },
+  { href: "#use-cases", label: "Use Cases" },
+  { href: "#comparison", label: "Comparison" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export function LandingPage() {
+  const { scrollYProgress } = useScroll();
+  const progressScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
     <>
-      <CustomCursor />
-      <AnimatedBackground />
-
-      <main className="relative min-h-screen overflow-hidden">
+      <ParallaxBackdrop />
+      <main className="min-h-screen bg-white text-slate-900">
+        <motion.div
+          aria-hidden="true"
+          className="fixed top-0 left-0 z-50 h-0.5 origin-left bg-slate-900"
+          style={{ scaleX: progressScale, width: "100%" }}
+        />
         <motion.header
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="fixed top-3 left-1/2 z-40 w-[calc(100%-1.5rem)] max-w-7xl -translate-x-1/2 rounded-2xl border border-white/10 bg-slate-950/50 px-4 py-3 backdrop-blur-xl sm:top-5 sm:px-6"
+          transition={{ duration: 0.4 }}
+          className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur"
         >
-          <div className="flex items-center justify-between gap-3">
-            <a href="#hero" className="flex items-center gap-2">
+          <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 sm:px-10">
+            <a href="#hero" className="flex items-center gap-3">
               <Image
                 src="/icon.svg"
                 alt="AI Product Studio logo"
-                width={32}
-                height={32}
-                className="h-8 w-8 rounded-lg ring-1 ring-cyan-200/45 shadow-[0_0_20px_rgba(72,221,255,0.35)]"
+                width={36}
+                height={36}
+                className="h-9 w-9 rounded-md"
                 priority
               />
-              <span className="font-display text-sm tracking-[0.18em] text-slate-100 uppercase">
+              <span className="font-display text-base tracking-tight text-slate-900 sm:text-lg">
                 AI Product Studio
               </span>
             </a>
 
-            <nav className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
+            <nav className="hidden items-center gap-7 text-sm text-slate-600 md:flex">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="transition hover:text-cyan-100"
+                  className="transition hover:text-slate-900"
                 >
                   {item.label}
                 </a>
               ))}
             </nav>
 
-            <button
-              type="button"
-              className="inline-flex items-center gap-1 rounded-lg border border-cyan-200/35 bg-cyan-200/10 px-3 py-1.5 text-xs text-cyan-100 transition hover:bg-cyan-200/20"
+            <a
+              href="#demo"
+              className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
             >
-              <Sparkles className="h-3.5 w-3.5" />
-              Request Access
-            </button>
+              Get Started
+            </a>
           </div>
         </motion.header>
 
         <HeroSection />
         <FeaturesSection />
+        <HowItWorksSection />
         <InteractiveDemoSection />
-        <DashboardPreviewSection />
-        <PricingSection />
+        <MetricsSection />
+        <UseCasesSection />
+        <TestimonialsSection />
+        <ComparisonSection />
+        <FaqSection />
         <FinalCtaSection />
+        <FooterSection />
       </main>
     </>
   );
