@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ComparisonSection } from "./ComparisonSection";
 import { FeaturesSection } from "./FeaturesSection";
 import { FinalCtaSection } from "./FinalCtaSection";
@@ -15,7 +14,6 @@ import { ParallaxBackdrop } from "./ParallaxBackdrop";
 import { TestimonialsSection } from "./TestimonialsSection";
 import { UseCasesSection } from "./UseCasesSection";
 import { useScroll, useTransform } from "framer-motion";
-import { withBasePath } from "@/utils/withBasePath";
 
 const navItems = [
   { href: "#features", label: "Features" },
@@ -48,13 +46,12 @@ export function LandingPage() {
         >
           <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 sm:px-10">
             <a href="#hero" className="flex items-center gap-3">
-              <Image
-                src={withBasePath("/icon.svg")}
+              <img
+                src="icon.svg"
                 alt="AI Product Studio logo"
                 width={36}
                 height={36}
                 className="h-9 w-9 rounded-md"
-                priority
               />
               <span className="font-display text-base tracking-tight text-slate-900 sm:text-lg">
                 AI Product Studio
