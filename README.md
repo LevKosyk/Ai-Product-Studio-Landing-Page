@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="./app/icon.svg" width="112" alt="AI Product Studio logo" />
+</p>
 
-## Getting Started
+<h1 align="center">AI Product Studio Landing Page</h1>
 
-First, run the development server:
+<p align="center">
+  Стильный футуристичный SaaS-лендинг с акцентом на motion-дизайн, glassmorphism и интерактивные UI-блоки.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" alt="TypeScript 5" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
+  <img src="https://img.shields.io/badge/Framer_Motion-Animations-111827?logo=framer&logoColor=white" alt="Framer Motion" />
+</p>
+
+## Preview
+
+![Hero preview](./assets/readme/hero-preview.gif)
+
+<p>
+  <img src="./assets/readme/product-flow.gif" width="70%" alt="Landing flow preview" />
+  <img src="./assets/readme/mobile-preview.gif" width="27%" alt="Mobile preview" />
+</p>
+
+## О проекте
+
+Этот проект демонстрирует визуально насыщенный landing page для AI-продукта:
+
+- сильный первый экран с анимированным hero-блоком;
+- карточки возможностей платформы;
+- интерактивная demo-секция с имитацией AI generation;
+- dashboard preview с анимированными графиками;
+- pricing-блок и финальный CTA.
+
+## Технологический стек
+
+- `Next.js 16` (App Router)
+- `React 19`
+- `TypeScript`
+- `Tailwind CSS 4`
+- `Framer Motion`
+- `lucide-react` (иконки)
+
+## Что использовано в лендинге
+
+- секционная архитектура на переиспользуемых компонентах в `components/landing`;
+- плавные reveal-анимации и микро-взаимодействия;
+- кастомный курсор и magnetic button-эффекты;
+- glassmorphism-стиль, градиенты и glow-элементы;
+- адаптивная верстка для desktop и mobile.
+
+## Запуск локально
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Скрипты
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - запуск dev-сервера
+- `npm run build` - production-сборка
+- `npm run start` - запуск production-версии
+- `npm run lint` - проверка ESLint
 
-## Learn More
+## Структура проекта
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+app/
+  layout.tsx
+  page.tsx
+  icon.svg
+components/
+  landing/
+assets/
+  readme/
+```
