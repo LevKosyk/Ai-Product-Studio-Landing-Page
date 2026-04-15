@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./app/icon.svg" width="120" alt="AI Product Studio icon" />
+  <img src="./public/icon.svg" width="120" alt="AI Product Studio icon" />
 </p>
 
 <h1 align="center">AI Product Studio Landing Page</h1>
@@ -163,7 +163,6 @@ All motion values are tuned to feel polished without sacrificing readability or 
 ```text
 app/
   globals.css
-  icon.svg
   layout.tsx
   page.tsx
 
@@ -185,6 +184,8 @@ assets/
   readme/
     screens/
 ```
+
+- `public/icon.svg`
 
 ---
 
@@ -231,7 +232,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Branding
 
-- Replace `app/icon.svg` with your own favicon/icon artwork.
+- Replace `public/icon.svg` with your own favicon/logo artwork.
 - Update title, description, and social metadata in `app/layout.tsx`.
 
 ### Content
