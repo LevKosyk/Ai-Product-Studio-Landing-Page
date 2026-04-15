@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const projectPagesBasePath = "/Ai-Product-Studio---Landing-Page";
+const projectPagesBasePath = "/Ai-Product-Studio-Landing-Page";
 const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
 const isGitHubPagesBuild =
 	process.env.GITHUB_ACTIONS === "true" && Boolean(repoName);
