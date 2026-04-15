@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Syne } from "next/font/google";
+import { withBasePath } from "@/utils/withBasePath";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -21,9 +22,9 @@ export const metadata: Metadata = {
     "A futuristic AI product studio for building high-end SaaS experiences with speed and precision.",
   applicationName: "AI Product Studio",
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    shortcut: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    icon: [{ url: withBasePath("/icon.svg"), type: "image/svg+xml" }],
+    shortcut: [{ url: withBasePath("/icon.svg"), type: "image/svg+xml" }],
+    apple: [{ url: withBasePath("/icon.svg"), type: "image/svg+xml" }],
   },
 };
 

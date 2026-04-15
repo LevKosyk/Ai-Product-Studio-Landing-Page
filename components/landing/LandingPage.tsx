@@ -15,6 +15,7 @@ import { ParallaxBackdrop } from "./ParallaxBackdrop";
 import { TestimonialsSection } from "./TestimonialsSection";
 import { UseCasesSection } from "./UseCasesSection";
 import { useScroll, useTransform } from "framer-motion";
+import { withBasePath } from "@/utils/withBasePath";
 
 const navItems = [
   { href: "#features", label: "Features" },
@@ -48,7 +49,7 @@ export function LandingPage() {
           <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 sm:px-10">
             <a href="#hero" className="flex items-center gap-3">
               <Image
-                src="/icon.svg"
+                src={withBasePath("/icon.svg")}
                 alt="AI Product Studio logo"
                 width={36}
                 height={36}
